@@ -1,9 +1,17 @@
+/**
+Scarlett Hwang
+Moloco Data Scientist Position Coding Challenge
+November 17th, 2019
+**/
+
+-- Part 1
+-- Data source: https://docs.google.com/spreadsheets/d/1AV-A1uhQqvF6h0_a-fupFQIHv6W7-vNm88AYh_WzeB0/edit#gid=1326833441
+
 -- 1. Largest number of unique users
 -- The site with id N0OTG has the largest number of unique users of 90.
 select top 1 count(user_id), site_id from
 (select unique user_id, site_id from table where country_id = 'BDV')
 group by site_id
-
 
 ----------------------------------------------------------------------------
 -- 2. Users who visited sites more than 10 times during the given timeframe
